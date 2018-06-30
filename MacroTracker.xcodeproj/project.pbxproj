@@ -13,6 +13,8 @@
 		764CE62420E790E6004296F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764CE62320E790E6004296F1 /* Assets.xcassets */; };
 		764CE62720E790E6004296F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764CE62520E790E6004296F1 /* LaunchScreen.storyboard */; };
 		764CE62A20E790E6004296F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 764CE62920E790E6004296F1 /* main.m */; };
+		7691388020E7F634008282D1 /* addFoodToDb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7691387F20E7F634008282D1 /* addFoodToDb.storyboard */; };
+		7691388820E7FC36008282D1 /* AddFoodToDbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691388720E7FC36008282D1 /* AddFoodToDbViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		764CE62620E790E6004296F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		764CE62820E790E6004296F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		764CE62920E790E6004296F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7691387F20E7F634008282D1 /* addFoodToDb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addFoodToDb.storyboard; sourceTree = "<group>"; };
+		7691388620E7FC36008282D1 /* AddFoodToDbViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddFoodToDbViewController.h; sourceTree = "<group>"; };
+		7691388720E7FC36008282D1 /* AddFoodToDbViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddFoodToDbViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,9 @@
 				764CE61D20E790E6004296F1 /* ViewController.h */,
 				764CE61E20E790E6004296F1 /* ViewController.m */,
 				764CE62020E790E6004296F1 /* Main.storyboard */,
+				7691387F20E7F634008282D1 /* addFoodToDb.storyboard */,
+				7691388620E7FC36008282D1 /* AddFoodToDbViewController.h */,
+				7691388720E7FC36008282D1 /* AddFoodToDbViewController.m */,
 				764CE62320E790E6004296F1 /* Assets.xcassets */,
 				764CE62520E790E6004296F1 /* LaunchScreen.storyboard */,
 				764CE62820E790E6004296F1 /* Info.plist */,
@@ -132,6 +140,7 @@
 				764CE62720E790E6004296F1 /* LaunchScreen.storyboard in Resources */,
 				764CE62420E790E6004296F1 /* Assets.xcassets in Resources */,
 				764CE62220E790E6004296F1 /* Main.storyboard in Resources */,
+				7691388020E7F634008282D1 /* addFoodToDb.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +154,7 @@
 				764CE61F20E790E6004296F1 /* ViewController.m in Sources */,
 				764CE62A20E790E6004296F1 /* main.m in Sources */,
 				764CE61C20E790E6004296F1 /* AppDelegate.m in Sources */,
+				7691388820E7FC36008282D1 /* AddFoodToDbViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
