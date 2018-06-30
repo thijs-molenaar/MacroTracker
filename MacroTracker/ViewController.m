@@ -28,7 +28,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    [self addDoneButton];
+}
+
+// add done button to keypad inputs so they can actually be closed by user
+- (void)addDoneButton {
+    UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
+    [keyboardToolbar sizeToFit];
+    UIBarButtonItem *flexBarButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                      target:nil action:nil];
+    UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                      target:self.view action:@selector(endEditing:)];
+    keyboardToolbar.items = @[flexBarButton, doneBarButton];
+    self.targetCaloriesTextBox.inputAccessoryView = keyboardToolbar;
+    self.bodyweightTextBox.inputAccessoryView = keyboardToolbar;
 }
 
 - (void)didReceiveMemoryWarning {
