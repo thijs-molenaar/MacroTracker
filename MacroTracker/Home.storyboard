@@ -26,21 +26,58 @@
             </objects>
             <point key="canvasLocation" x="396" y="214"/>
         </scene>
-        <!--Item 1-->
+        <!--Home-->
         <scene sceneID="4Lj-fP-Kco">
             <objects>
-                <viewController id="PKH-Xo-dgL" sceneMemberID="viewController">
+                <viewController id="PKH-Xo-dgL" userLabel="Home" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EcN-wB-jvt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTR-HM-H6D">
+                                <rect key="frame" x="150" y="127" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="set targets"/>
+                                <connections>
+                                    <action selector="setTargetsInDb" destination="PKH-Xo-dgL" eventType="touchDown" id="nke-Mh-qZc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuA-y2-ywB">
+                                <rect key="frame" x="142" y="223" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="unset targets"/>
+                                <connections>
+                                    <action selector="unsetTargetsInDb" destination="PKH-Xo-dgL" eventType="touchDown" id="fQs-it-zRi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="targets status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg4-v6-1aq">
+                                <rect key="frame" x="50" y="289" width="106" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="not set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-4S-MlX">
+                                <rect key="frame" x="226" y="289" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zAD-bb-cZd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" image="House Tab Icon" id="wmp-wh-uhf"/>
+                    <connections>
+                        <outlet property="setTargets" destination="cTR-HM-H6D" id="p4L-DV-Xwx"/>
+                        <outlet property="targetsSetLabel" destination="PRg-4S-MlX" id="UJu-rv-V2C"/>
+                        <outlet property="unsetTargets" destination="CuA-y2-ywB" id="VQg-lU-fys"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhU-NQ-Tcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397" y="-454"/>
+            <point key="canvasLocation" x="396" y="-454.72263868065971"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="z3R-XN-IXo">

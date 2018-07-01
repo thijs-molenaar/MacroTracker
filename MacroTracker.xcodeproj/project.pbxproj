@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		763EC21620E885FA003E0186 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763EC21520E885FA003E0186 /* Home.storyboard */; };
 		763EC21C20E8870C003E0186 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763EC21B20E8870C003E0186 /* TabBarController.m */; };
+		763EC21F20E8C89A003E0186 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763EC21E20E8C89A003E0186 /* HomeViewController.m */; };
+		763EC24720E8D671003E0186 /* MacroTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 763EC24520E8D671003E0186 /* MacroTracker.xcdatamodeld */; };
 		764CE61C20E790E6004296F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 764CE61B20E790E6004296F1 /* AppDelegate.m */; };
 		764CE61F20E790E6004296F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 764CE61E20E790E6004296F1 /* ViewController.m */; };
 		764CE62220E790E6004296F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764CE62020E790E6004296F1 /* Main.storyboard */; };
@@ -23,6 +25,9 @@
 		763EC21520E885FA003E0186 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		763EC21A20E8870C003E0186 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		763EC21B20E8870C003E0186 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		763EC21D20E8C89A003E0186 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		763EC21E20E8C89A003E0186 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		763EC24620E8D671003E0186 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		764CE61720E790E6004296F1 /* MacroTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764CE61A20E790E6004296F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		764CE61B20E790E6004296F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,6 +75,8 @@
 			children = (
 				764CE61A20E790E6004296F1 /* AppDelegate.h */,
 				764CE61B20E790E6004296F1 /* AppDelegate.m */,
+				763EC21D20E8C89A003E0186 /* HomeViewController.h */,
+				763EC21E20E8C89A003E0186 /* HomeViewController.m */,
 				764CE61D20E790E6004296F1 /* ViewController.h */,
 				764CE61E20E790E6004296F1 /* ViewController.m */,
 				763EC21A20E8870C003E0186 /* TabBarController.h */,
@@ -83,6 +90,7 @@
 				764CE62520E790E6004296F1 /* LaunchScreen.storyboard */,
 				764CE62820E790E6004296F1 /* Info.plist */,
 				764CE62920E790E6004296F1 /* main.m */,
+				763EC24520E8D671003E0186 /* MacroTracker.xcdatamodeld */,
 			);
 			path = MacroTracker;
 			sourceTree = "<group>";
@@ -163,8 +171,10 @@
 				764CE61F20E790E6004296F1 /* ViewController.m in Sources */,
 				764CE62A20E790E6004296F1 /* main.m in Sources */,
 				763EC21C20E8870C003E0186 /* TabBarController.m in Sources */,
+				763EC24720E8D671003E0186 /* MacroTracker.xcdatamodeld in Sources */,
 				764CE61C20E790E6004296F1 /* AppDelegate.m in Sources */,
 				7691388820E7FC36008282D1 /* AddFoodToDbViewController.m in Sources */,
+				763EC21F20E8C89A003E0186 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +356,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		763EC24520E8D671003E0186 /* MacroTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				763EC24620E8D671003E0186 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 763EC24620E8D671003E0186 /* DataModel.xcdatamodel */;
+			path = MacroTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 764CE60F20E790E6004296F1 /* Project object */;
 }
