@@ -13,7 +13,7 @@
         <!--Set targets-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Set targets" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" title="Set targets" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,6 +103,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6i-Vc-XjP">
+                                <rect key="frame" x="126" y="427" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="go to tabbed view"/>
+                                <connections>
+                                    <action selector="openTabsStoryboard" destination="BYZ-38-t0r" eventType="touchDown" id="kah-wU-Gi1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -112,6 +120,7 @@
                         <outlet property="calcButton" destination="fha-KH-oCD" id="s65-DV-4Fc"/>
                         <outlet property="carbsAmountLabel" destination="lPu-ZG-3Lq" id="1Nr-MN-9t7"/>
                         <outlet property="fatAmountLabel" destination="quz-mP-R5D" id="pK3-rx-Oa5"/>
+                        <outlet property="goToTabsButton" destination="S6i-Vc-XjP" id="jak-i7-gSw"/>
                         <outlet property="proteinAmountLabel" destination="65e-7k-FLL" id="UIj-lP-0TQ"/>
                         <outlet property="targetCaloriesTextBox" destination="b9Y-2N-P7J" id="sh2-cB-PcX"/>
                     </connections>

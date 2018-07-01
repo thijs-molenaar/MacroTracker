@@ -13,7 +13,7 @@
         <!--Add Food To Db View Controller-->
         <scene sceneID="eWY-Ir-huj">
             <objects>
-                <viewController id="tJ0-ar-2G6" customClass="AddFoodToDbViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addFoodToDb" id="tJ0-ar-2G6" customClass="AddFoodToDbViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mgl-91-PFr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

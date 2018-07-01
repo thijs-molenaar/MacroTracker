@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		763EC21620E885FA003E0186 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763EC21520E885FA003E0186 /* Home.storyboard */; };
+		763EC21C20E8870C003E0186 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763EC21B20E8870C003E0186 /* TabBarController.m */; };
 		764CE61C20E790E6004296F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 764CE61B20E790E6004296F1 /* AppDelegate.m */; };
 		764CE61F20E790E6004296F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 764CE61E20E790E6004296F1 /* ViewController.m */; };
 		764CE62220E790E6004296F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764CE62020E790E6004296F1 /* Main.storyboard */; };
@@ -18,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		763EC21520E885FA003E0186 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		763EC21A20E8870C003E0186 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		763EC21B20E8870C003E0186 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		764CE61720E790E6004296F1 /* MacroTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764CE61A20E790E6004296F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		764CE61B20E790E6004296F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,7 +72,10 @@
 				764CE61B20E790E6004296F1 /* AppDelegate.m */,
 				764CE61D20E790E6004296F1 /* ViewController.h */,
 				764CE61E20E790E6004296F1 /* ViewController.m */,
+				763EC21A20E8870C003E0186 /* TabBarController.h */,
+				763EC21B20E8870C003E0186 /* TabBarController.m */,
 				764CE62020E790E6004296F1 /* Main.storyboard */,
+				763EC21520E885FA003E0186 /* Home.storyboard */,
 				7691387F20E7F634008282D1 /* addFoodToDb.storyboard */,
 				7691388620E7FC36008282D1 /* AddFoodToDbViewController.h */,
 				7691388720E7FC36008282D1 /* AddFoodToDbViewController.m */,
@@ -138,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				764CE62720E790E6004296F1 /* LaunchScreen.storyboard in Resources */,
+				763EC21620E885FA003E0186 /* Home.storyboard in Resources */,
 				764CE62420E790E6004296F1 /* Assets.xcassets in Resources */,
 				764CE62220E790E6004296F1 /* Main.storyboard in Resources */,
 				7691388020E7F634008282D1 /* addFoodToDb.storyboard in Resources */,
@@ -153,6 +162,7 @@
 			files = (
 				764CE61F20E790E6004296F1 /* ViewController.m in Sources */,
 				764CE62A20E790E6004296F1 /* main.m in Sources */,
+				763EC21C20E8870C003E0186 /* TabBarController.m in Sources */,
 				764CE61C20E790E6004296F1 /* AppDelegate.m in Sources */,
 				7691388820E7FC36008282D1 /* AddFoodToDbViewController.m in Sources */,
 			);

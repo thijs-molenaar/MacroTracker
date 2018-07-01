@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *carbsAmountLabel;
 @property (weak, nonatomic) IBOutlet UITextField *targetCaloriesTextBox;
 @property (weak, nonatomic) IBOutlet UITextField *bodyweightTextBox;
+@property (weak, nonatomic) IBOutlet UIButton *goToTabsButton;
 
 @property NSInteger proteinAmount;
 @property NSInteger fatAmount;
@@ -49,6 +50,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)openTabsStoryboard {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
+        UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"home"];
+        vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:vc animated:YES completion:NULL];
 }
 
 - (IBAction)calcButtonPressed {
