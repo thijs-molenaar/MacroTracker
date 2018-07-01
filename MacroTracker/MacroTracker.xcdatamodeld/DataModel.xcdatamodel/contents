@@ -3,6 +3,7 @@
     <entity name="Food" representedClassName="Food" syncable="YES" codeGenerationType="class">
         <attribute name="carbs" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fat" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="protein" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="serving_size" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="food__food_entry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Food_Entry" inverseName="food_entry__food" inverseEntity="Food_Entry" syncable="YES"/>
