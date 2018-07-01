@@ -55,11 +55,29 @@
                     <connections>
                         <segue destination="PKH-Xo-dgL" kind="relationship" relationship="viewControllers" id="0qr-5a-LoY"/>
                         <segue destination="Qbw-Qp-FKy" kind="relationship" relationship="viewControllers" id="uh9-gD-i0q"/>
+                        <segue destination="lfn-7J-TzL" kind="relationship" relationship="viewControllers" id="mXY-pQ-69S"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQN-2H-i5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-554" y="-122"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="9P3-FS-c62">
+            <objects>
+                <viewController id="lfn-7J-TzL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="izz-nG-nGK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fSH-MD-8jo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="i8o-EB-MWr"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="45Z-bI-Qgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="1039"/>
         </scene>
     </scenes>
     <resources>
