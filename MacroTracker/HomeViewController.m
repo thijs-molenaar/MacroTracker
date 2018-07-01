@@ -7,6 +7,10 @@
 //
 
 #import "HomeViewController.h"
+#import "AppDelegate.h"
+#import "Food+CoreDataProperties.h"
+#define foodEntityName @"Food"
+
 
 
 @interface HomeViewController ()
@@ -14,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *unsetTargets;
 @property (weak, nonatomic) IBOutlet UILabel *targetsSetLabel;
 @property (strong) NSMutableArray *foods;
+@property(nonatomic, strong) NSPersistentContainer *persistanceContainer;
+
 
 @end
 
@@ -46,34 +52,65 @@
     // functie managedObjectContext
     
     // Fetch the foods from persistent data store
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Food"];
-    self.foods = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    NSLog(@"abcd");
+//    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Food"];
+//    self.foods = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+//    NSLog(@"abcd");
+    
+    
+//    NSPersistentContainer *persistanceContainer = [NSPersistentContainer persistentContainerWithName:@"MacroTracker"];
+//    [persistanceContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription * _Nonnull description, NSError * _Nullable error) {
+//        if (error != nil) {
+//            NSLog(@"%@ %@", description, error);
+//        }
+//    }];
+    self.persistanceContainer = ((AppDelegate *)[UIApplication sharedApplication].delegate).persistentContainer;
+
+    
+    NSFetchRequest *query = [NSFetchRequest fetchRequestWithEntityName:@"Food"];
+    NSArray *results = [[self.persistanceContainer viewContext] executeFetchRequest:query error:nil];
+    NSLog(@"asd");
 }
 
 - (IBAction)setTargetsInDb {
-    NSManagedObjectContext *context = [self managedObjectContext];
+//    NSManagedObjectContext *context = [self managedObjectContext];
+//
+//    // Create a new managed object
+//    NSManagedObject *newFood = [NSEntityDescription insertNewObjectForEntityForName:@"Food" inManagedObjectContext:context];
+//    [newFood setValue:@"kefir/muesli/noten" forKey:@"name"];
+//    [newFood setValue:@"21" forKey:@"protein"];
+//    [newFood setValue:@"13" forKey:@"fat"];
+//    [newFood setValue:@"65" forKey:@"carbs"];
+//    [newFood setValue:@"13" forKey:@"fat"];
+//    [newFood setValue:@"cup" forKey:@"serving_size_type"];
+//    [newFood setValue:@"1" forKey:@"serving_size"];
     
-    // Create a new managed object
-    NSManagedObject *newFood = [NSEntityDescription insertNewObjectForEntityForName:@"Food" inManagedObjectContext:context];
-    [newFood setValue:@"kefir/muesli/noten" forKey:@"name"];
-    [newFood setValue:@"21" forKey:@"protein"];
-    [newFood setValue:@"13" forKey:@"fat"];
-    [newFood setValue:@"65" forKey:@"carbs"];
-    [newFood setValue:@"13" forKey:@"fat"];
-    [newFood setValue:@"cup" forKey:@"serving_size_type"];
-    [newFood setValue:@"1" forKey:@"serving_size"];
+    Food *food = [NSEntityDescription insertNewObjectForEntityForName:foodEntityName inManagedObjectContext:self.persistanceContainer.viewContext];
+    food.name = @"kefir/muesli/noten";
+    food.protein = 21;
+    food.fat = 13;
+    food.carbs = 65;
+    food.serving_size_type = @"cup";
+    food.serving_size = 1;
     
-    NSError *error = nil;
-    // Save the object to persistent store
-    if (![context save:&error]) {
-        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-    }
+//    NSError *error = nil;
+//    // Save the object to persistent store
+//    if (![context save:&error]) {
+//        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+//    }
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    // close view
+    //[self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)unsetTargetsInDb {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:foodEntityName];
+    NSArray<Food *> *results = [self.persistanceContainer.viewContext executeFetchRequest:fetchRequest error:nil];
+    for (Food *food in results) {
+        NSLog(@"name %@", food.name);
+        NSLog(@"protein  %i", food.protein);
+        NSLog(@"fat  %i", food.fat);
+        NSLog(@"carbs  %i", food.carbs);
+    }
 }
 
 /*
